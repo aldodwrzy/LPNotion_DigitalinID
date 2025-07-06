@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digitalin - All-In Digital Solution</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:  '#f0f6fc',
+              100: '#e6f0fa',
+              200: '#b8d6f2',
+              300: '#7bbbe6',
+              400: '#3a9ad6',
+              500: '#1A3C7C', // Deep Blue
+              600: '#1CA6A4', // Teal
+              700: '#1CC6C4', // Cyan
+              800: '#3CCB6C', // Green
+              900: '#145a32'
+            },
+            accent: {
+              500: '#3CCB6C', // Green
+              600: '#1CA6A4', // Teal
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Grid.js CSS (for FAQ table) -->
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+  <!-- ApexCharts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link rel="icon" href="https://mysterious-planet-7120.laman.ai/assets/WhatsApp%20Image%202025-06-10%20at%2014.42.42%20(1).webp" type="image/webp">
+</head>
+<body class="bg-gray-50 font-sans text-gray-700 scroll-smooth">
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+    <nav class="container mx-auto flex items-center justify-between py-3 px-4 md:px-8" aria-label="Navigasi utama">
+      <div class="flex items-center space-x-3">
+        <img src="https://mysterious-planet-7120.laman.ai/assets/WhatsApp%20Image%202025-06-10%20at%2014.42.42%20(1).webp" alt="Logo DigitAL-IN" class="w-10 h-10 rounded-full" />
+        <span class="text-2xl font-bold text-primary-500 tracking-tight">Digitalin</span>
+      </div>
+      <button id="navToggle" class="md:hidden text-primary-500 focus:outline-none" aria-label="Buka navigasi">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <ul id="navMenu" class="hidden md:flex space-x-8 text-base font-medium">
+        <li><a href="#fitur" class="hover:text-primary-600 transition-colors focus:outline-none focus:text-primary-700">Fitur</a></li>
+        <!-- <li><a href="#testimoni" class="hover:text-primary-600 transition-colors focus:outline-none focus:text-primary-700">Testimoni</a></li> -->
+        <li><a href="#harga" class="hover:text-primary-600 transition-colors focus:outline-none focus:text-primary-700">Harga</a></li>
+        <li><a href="#kontak" class="hover:text-primary-600 transition-colors focus:outline-none focus:text-primary-700">FAQ</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden bg-white border-t border-gray-100">
+      <ul class="flex flex-col space-y-2 py-4 px-6 text-base font-medium">
+        <li><a href="#fitur" class="block hover:text-primary-600 transition-colors">Fitur</a></li>
+        <!-- <li><a href="#testimoni" class="block hover:text-primary-600 transition-colors">Testimoni</a></li> -->
+        <li><a href="#harga" class="block hover:text-primary-600 transition-colors">Harga</a></li>
+        <li><a href="#kontak" class="block hover:text-primary-600 transition-colors">FAQ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="container mx-auto px-4 md:px-8 py-12 flex flex-col-reverse md:flex-row items-center gap-10" id="hero">
+    <div class="w-full md:w-1/2 mt-8 md:mt-0">
+      <h1 class="text-4xl md:text-5xl font-bold text-primary-500 mb-4 leading-tight">
+        Ultimate Notion Bundle
+      </h1>
+      <p class="text-lg text-gray-700 mb-6">
+        Digitalin menghadirkan <span class="text-primary-600 font-semibold">TEMPLATE NOTION LENGKAP</span> yang mudah digunakan dan membantu otomatisasi kebutuhan Anda. Hemat waktu, minim error, dan lebih produktif!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#harga" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 transition-colors text-white rounded-md font-semibold shadow focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 text-center" aria-label="Beli Sekarang Digitalin">
+              <i class="fas fa-shopping-cart mr-2"></i> Beli Sekarang
+            </a>
+            <a href="https://digital-in.myr.id/" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 transition-colors text-white rounded-md font-semibold shadow focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 text-center" aria-label="Coba Gratis Digitalin">
+              <i class="fas fa-play-circle mr-2"></i> Katalog Produk
+            </a>
+        </div>
+    </div>
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img src="https://mysterious-planet-7120.laman.ai/assets/Cover%201.webp" alt="Gambar produk Ultimate Notion Bundle" class="w-full max-w-md rounded-xl shadow-lg transition-transform duration-300 hover:scale-105" />
+    </div>
+  </section>
+
+  <!-- ================= FITUR UTAMA ================= -->
+  <section id="fitur" class="bg-white py-16">
+    <div class="container mx-auto px-4 md:px-8">
+      <h2 class="text-3xl font-bold text-primary-500 mb-10 text-center">Fitur Unggulan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Fitur 1 -->
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="bg-primary-100 text-primary-600 rounded-full p-4 mb-4">
+            <i class="fas fa-duotone fa-regular fa-download fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Template Siap Pakai</h3>
+          <p class="text-gray-600 text-center">Beragam template Notion untuk berbagai kebutuhan bisnis, sekolah, dan lainnya langsung pakai tanpa ribet.</p>
+        </div>
+        <!-- Fitur 2 -->
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="bg-primary-100 text-accent-500 rounded-full p-4 mb-4">
+            <i class="fas fa-duotone fa-regular fa-square-check fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Mudah Digunakan</h3>
+          <p class="text-gray-600 text-center">Antarmuka sederhana, template siap pakai, dan cocok untuk pemula maupun profesional.</p>
+        </div>
+        <!-- Fitur 3 -->
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="bg-primary-100 text-primary-700 rounded-full p-4 mb-4">
+            <i class="fas fa-duotone fa-regular fa-bolt fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Otomatisasi Laporan</h3>
+          <p class="text-gray-600 text-center">Menampilkan konten dalam bentuk tabel, kanban, atau kalender untuk memaksimalkan pekerjaan sehari-hari.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MANFAAT PRODUK ================= -->
+  <section class="py-16 bg-gradient-to-b from-primary-50 to-white" id="manfaat">
+    <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10">
+      <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <img src="asset/image1.png" alt="Keuntungan Utama" class="w-full h-auto rounded-lg" />
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-primary-500 mb-4">Keuntungan Utama</h2>
+        <p class="text-lg text-gray-700 mb-4">
+          <span class="font-semibold text-primary-600">Template Notion ini </span> cocok digunakan untuk Freelancer, solopreneur, profesional muda, siswa, mahasiswa dan tim kecil yang butuh solusi praktis & kolaboratif. Tidak hanya itu, template notion ini memiliki keuntungan utama, yaitu: 
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+          <li>UI bersih & mudah dipelajari.</li>
+          <li>Bisa dibatasi akses untuk melindungi privasi.</li>
+          <li>Multi‑platform (web, desktop, mobile).</li>
+          <li>Fitur reminder & deadline membantu tepat waktu.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HARGA DAN PAKET ================= -->
+  <section id="harga" class="py-16 bg-gradient-to-b from-white to-primary-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <!-- <h2 class="text-3xl font-bold text-primary-500 mb-10 text-center">Promo Terbatas, Hanya Rp 25.000</h2> -->
+      <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg border-2 border-accent-500 p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-2xl font-semibold text-accent-500 mb-2">Promo Terbatas</h3>
+          <div class="text-3xl font-bold text-accent-500 mb-4">10 (+1 Bonus) Template Hanya Rp25.000</div>
+          <ul class="text-gray-700 mb-6 space-y-2 text-center">
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Habits Tracker</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Student Dasboard</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Book Tracker</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Habits Journal</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Student Planner</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Life Planner</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Time Blocking</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Second Banner</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Income Dashboard</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Finance Tracker</li>
+            <li><i class="fas fa-check-circle text-accent-500 mr-2"></i> Social Media Planner</li>
+          </ul>
+          <a href="#formcheckout" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 transition-colors text-white rounded-md font-semibold shadow focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 text-center" aria-label="Ambil Promonya Sekarang">
+            Ambil Promonya Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Embed Form Checkout ================= -->
+  <section id="formcheckout"></section>
+  <iframe allowfullscreen="" allowpaymentrequest="allowpaymentrequest" scrolling="no" frameborder="0" width="100%" height="100%" src="https://digital-in.myr.id/pl/ultimate-notion-bundle" data-hide-product-images="true" ></iframe>
+  <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayarEmbed.min.js"></script>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="py-16 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4 md:px-8 max-w-3xl">
+      <h2 class="text-3xl font-bold text-primary-500 mb-8 text-center">Pertanyaan Umum (FAQ)</h2>
+      <div class="space-y-4" id="faqList" aria-label="Daftar pertanyaan umum">
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-5 transition-all duration-300">
+            <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-primary-600 focus:outline-none faq-toggle" aria-expanded="false" aria-controls="faq2">
+             Apa itu Notion?
+              <i class="fas fa-chevron-down transition-transform duration-200"></i>
+            </button>
+            <div id="faq2" class="faq-content mt-2 text-gray-700 hidden" aria-hidden="true">
+              Notion adalah aplikasi *all‑in‑one* untuk catatan, to‑do list, database, CV/portofolio, dan tracker lamaran kerja, semuanya dalam satu platform fleksibel.
+            </div>
+          </div>
+        <!-- FAQ Item 1 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-5 transition-all duration-300">
+          <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-primary-600 focus:outline-none faq-toggle" aria-expanded="false" aria-controls="faq1">
+            Bagaimana cara menggunakan templatenya ketika saya sudah membelinya?
+            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+          </button>
+          <div id="faq1" class="faq-content mt-2 text-gray-700 hidden" aria-hidden="true">
+            Ketika anda sudah membeli templatenya, nantinya anda akan mendapatkan file PDF yang berisikan link dari masing masing template Notion tersebut, selanjutnya buka link template yang ingin digunakan lalu klik button duplicate, setelah itu template notionnya akan otomatis terpaste di akun Notion Anda.
+          </div>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-5 transition-all duration-300">
+          <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-primary-600 focus:outline-none faq-toggle" aria-expanded="false" aria-controls="faq3">
+            Bagaimana cara mendapatkan support jika ada kendala?
+            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+          </button>
+          <div id="faq3" class="faq-content mt-2 text-gray-700 hidden" aria-hidden="true">
+            Anda dapat menghubungi tim support kami melalui email, WhatsApp, atau formulir kontak di bawah.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="kontak" class="bg-primary-500 text-white py-10 mt-8">
+    <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-start gap-8">
+      <!-- Kontak -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Kontak Kami</h3>
+        <ul class="space-y-1 text-base">
+          <li><i class="fas fa-envelope mr-2"></i> aldointan1104@gmail.com</li>
+          <li><i class="fas fa-phone mr-2"></i> 0812-9585-1663</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Jl. Sarijadi Raya, Bandung</li>
+        </ul>
+      </div>
+      <!-- Sosial Media -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Sosial Media</h3>
+        <div class="flex space-x-4 mt-2 justify-center">
+          <a href="https://www.instagram.com/digital.in_id/" class="hover:text-accent-500 transition-colors" aria-label="Instagram Digitalin"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61577382246869&rdid=8y68z1erRwMxm6FJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AbbZqZ4wq%2F#" class="hover:text-accent-500 transition-colors" aria-label="Facebook Digitalin"><i class="fab fa-facebook fa-lg"></i></a>
+        </div>
+      </div>
+      <!-- Logo Footer -->
+      <div class="flex flex-col items-center md:items-end">
+        <img src="https://mysterious-planet-7120.laman.ai/assets/WhatsApp%20Image%202025-06-10%20at%2014.42.42%20(1).webp" alt="Logo DigitAL-IN" class="w-16 h-16 rounded-full mb-2" />
+        <span class="text-lg font-bold">Digitalin</span>
+        <span class="text-sm text-primary-100">© 2025 Digitalin. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- Grid.js (for FAQ if needed) -->
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <!-- ApexCharts (not used in this page, but included as per requirements) -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- Custom JS -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', function() {
+      mobileNav.classList.toggle('hidden');
+      navToggle.setAttribute('aria-expanded', mobileNav.classList.contains('hidden') ? 'false' : 'true');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('#mobileNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach((btn, idx) => {
+      btn.addEventListener('click', function() {
+        const content = btn.parentElement.querySelector('.faq-content');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-content').forEach(el => {
+          el.classList.add('hidden');
+          el.setAttribute('aria-hidden', 'true');
+        });
+        document.querySelectorAll('.faq-toggle').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.querySelector('i').classList.remove('rotate-180');
+        });
+        // Open current if not already open
+        if (!expanded) {
+          content.classList.remove('hidden');
+          content.setAttribute('aria-hidden', 'false');
+          btn.setAttribute('aria-expanded', 'true');
+          btn.querySelector('i').classList.add('rotate-180');
+        }
+      });
+      // Keyboard accessibility
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
+    // Demo form submission
+    document.getElementById('demoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('demoSuccess').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('demoSuccess').classList.add('hidden');
+        document.getElementById('demoForm').reset();
+      }, 4000);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
